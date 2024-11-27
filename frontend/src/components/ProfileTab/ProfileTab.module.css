@@ -1,0 +1,85 @@
+.blockTabs {
+  display: flex;
+  margin-bottom: 1rem;
+
+  position: sticky;
+  top: 3.5rem;
+  background-color: white;
+  z-index: 1000;
+}
+
+.tabs {
+  width: 50%;
+  position: relative;
+  padding: 0.8rem;
+  display: inline-block;
+  text-align: center;
+  background: rgba(249, 249, 249, 0.075);
+  cursor: pointer;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.274);
+  box-sizing: content-box;
+  position: relative;
+  outline: none;
+}
+
+.activeTab::before {
+  content: '';
+  display: block;
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100%;
+  height: 2px;
+  background: rgb(var(--accent-color));
+}
+
+button {
+  border: none;
+}
+.contentTabs {
+  flex-grow: 1;
+}
+.content {
+  background: white;
+  display: none;
+}
+.content h2 {
+  padding: 0px 0 5px 0px;
+}
+.content hr {
+  width: 100px;
+  height: 2px;
+  background: #222;
+  margin-bottom: 5px;
+}
+.content p {
+  width: 100%;
+  height: 100%;
+}
+.activeContent {
+  display: block;
+}
+
+.posts {
+  scroll-margin-top: 3rem;
+  margin-inline: auto;
+  padding-block: 2rem;
+  background-color: rgb(var(--bg-light));
+  margin-top: 3.5rem;
+}
+
+.posts h2 {
+  font-size: 1.3rem;
+  margin-bottom: 0.8rem;
+}
+
+@media (min-width: 800px) {
+  .ProfileTab {
+    padding-inline: 1rem;
+  }
+
+  .blockTabs {
+    top: 4rem;
+  }
+}

@@ -1,0 +1,30 @@
+.mainMenu {
+  background-color: rgb(var(--bg-white));
+  padding: 10rem 35rem;
+  border-radius: 5px;
+  align-items: center;
+}
+
+.mainMenu > * + * {
+  margin-top: 1rem;
+}
+
+.title {
+  text-transform: capitalize;
+}
+
+.topic {
+  margin-left: 0.25rem;
+}
+
+.mainMenu li {
+  list-style: inside;
+}
+
+.mainMenu .startQuizButton {
+  font-size: 1.5rem;
+  font-weight: 500;
+  padding: 1rem 2rem;
+  white-space: nowrap; /* Prevents line break inside the button */
+  display: inline-block; /* Ensures proper padding and alignment */
+}

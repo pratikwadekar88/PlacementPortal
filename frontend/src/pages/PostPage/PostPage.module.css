@@ -1,0 +1,193 @@
+.PostPage {
+  padding-top: 5rem;
+  padding-bottom: 3rem;
+  background-color: rgb(248, 249, 254);
+  min-height: 100vh;
+  min-height: 100dvh;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  background-color: rgb(248, 249, 254);
+}
+
+.right {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+
+  /* Adding sticky behavior */
+  position: sticky;
+  top: 5rem;
+  height: fit-content;
+}
+
+.userDetails {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  align-items: center;
+  padding-bottom: 10px;
+  width: 100%;
+  color: rgb(151, 151, 151);
+  font-size: 0.8rem;
+}
+
+.post,
+.dataCard,
+.related {
+  box-shadow: var(--box-shadow);
+  border-radius: 5px;
+  padding: 1rem 2rem;
+  background-color: #fff;
+}
+
+.related {
+  position: sticky;
+}
+
+.related > p {
+  padding: 0;
+  font-size: 1.25rem;
+  margin-bottom: 0.5rem;
+}
+
+.post {
+  width: 60%;
+}
+
+.title {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.data {
+  margin: 10px;
+}
+
+.postDetails {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  align-items: center;
+
+  margin-top: 20px;
+  margin-bottom: 20px;
+
+  width: 100%;
+  color: rgb(151, 151, 151);
+  font-size: 0.8rem;
+}
+
+.filerElementBlock {
+  display: flex;
+  column-gap: 15px;
+}
+
+.inputField label select option {
+  color: #333;
+}
+
+.filterInput :where(input, select, option) {
+  cursor: pointer;
+  width: 100%;
+  position: relative;
+  text-align: center;
+  outline: none;
+  font-size: 0.9rem;
+  color: #707070;
+  border: 1px solid #ddd;
+  background-color: #fff;
+  border-radius: 6px;
+  padding: 0.25rem 1rem;
+}
+
+.filterInput :where(select) {
+  text-indent: 1px;
+  text-overflow: '';
+}
+
+.atRate {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.reply {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.wrapper {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.imageCover {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+
+  object-fit: cover;
+  object-position: center left;
+}
+
+.cmtImageCover {
+  width: 40px;
+  border-radius: 50%;
+
+  object-fit: cover;
+  object-position: center left;
+}
+
+.dataCard {
+  padding: 1rem 1.25rem;
+}
+
+.dataListItem {
+  display: flex;
+  justify-content: space-between;
+  gap: 2rem;
+}
+
+.related {
+  padding: 1rem 1.25rem;
+}
+
+.right li {
+  list-style: none;
+}
+
+.editPostButton {
+  width: 100%;
+  margin-top: 0.8rem;
+  background-color: white;
+  padding: 0.3rem 2rem;
+  border-radius: 6px;
+  border: 1px solid #754cff;
+  color: #754cff;
+  display: inline-block;
+  text-align: center;
+  text-decoration: none;
+}
+
+@media (max-width: 1000px) {
+  .right {
+    display: none;
+  }
+
+  .post {
+    width: 100%;
+  }
+}
+
+@media (min-width: 768px) {
+  .editPostButton {
+    width: auto;
+    margin-right: 1rem;
+  }
+}

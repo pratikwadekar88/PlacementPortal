@@ -1,0 +1,69 @@
+.tagList {
+  margin: 0;
+  padding-inline: 0;
+  list-style: none;
+}
+
+.tagList li {
+  width: max-content;
+
+  padding: 1rem 2rem;
+  border-radius: 0.5rem;
+  background-color: hsl(215, 25%, 27%);
+  box-shadow: 0 0.5rem 1rem -0.25rem hsl(218, 33%, 9%);
+  font-weight: 500;
+  color: white;
+
+  text-transform: capitalize;
+}
+
+.scroller {
+  max-width: 100%;
+}
+
+.scroller[data-animated='true'] {
+  --duration: 30s;
+  overflow: hidden;
+  transform: translateX(0);
+  transition: 0.25s ease-out;
+
+  -webkit-mask: linear-gradient(
+    90deg,
+    transparent,
+    white 20%,
+    white 80%,
+    transparent
+  );
+
+  mask: linear-gradient(90deg, transparent, white 20%, white 80%, transparent);
+}
+
+.scrollerInner {
+  padding-block: 1rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.scroller[data-animated='true'] .scrollerInner {
+  width: fit-content;
+  flex-wrap: nowrap;
+  animation: scroll var(--duration) linear infinite;
+}
+
+.scroller[data-animated='true']:hover {
+  transform: translateX(-3px);
+}
+
+.scroller[data-animated='true'] .scrollerInner:hover {
+  -webkit-animation-play-state: paused;
+  -moz-animation-play-state: paused;
+  -o-animation-play-state: paused;
+  animation-play-state: paused;
+}
+
+@keyframes scroll {
+  to {
+    transform: translate(calc(-50% - 0.5rem));
+  }
+}
